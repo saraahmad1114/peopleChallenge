@@ -11,7 +11,7 @@ import Foundation
 class PeopleAPIClient{
 
     
-    //GET Function
+    //GET REQUEST FUNCTION
     class func getPeopleInformation (completion:@escaping(Array<Any>)->()){
         var jsonPeopleResponse : Array<Any> = []
         
@@ -48,6 +48,7 @@ class PeopleAPIClient{
         task.resume()
     }
 
+    //POST REQUEST FUNCTION
     class func postPeopleInformation(nameVal: String, favoriteCityVal: String) -> (){
         
         let dictionaryParameters = ["name": nameVal,
