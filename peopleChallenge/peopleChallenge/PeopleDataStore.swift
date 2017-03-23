@@ -19,10 +19,6 @@ class PeopleDataStore{
     
         PeopleAPIClient.getPeopleInformation { (peopleArray) in
             
-            if peopleArray.count == 0{
-                print("You do not have people")
-            }
-            else{
             for singleDictionary in peopleArray{
             
                 guard let unwrappedSingleDictionary = singleDictionary as? [String: Any] else{print("unwrappedSingleDicitonary did not unwrap"); return}
@@ -44,7 +40,7 @@ class PeopleDataStore{
                 print("************************************************")
             }
             completion(self.peopleArray)
-            }
+         
         }
     
     }
