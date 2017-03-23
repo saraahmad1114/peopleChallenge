@@ -10,7 +10,6 @@ import Foundation
 
 class PeopleAPIClient{
 
-    
     //GET REQUEST FUNCTION
     class func getPeopleInformation (completion:@escaping(Array<Any>)->()){
         var jsonPeopleResponse : Array<Any> = []
@@ -133,7 +132,7 @@ class PeopleAPIClient{
         task.resume()
     }
 
-    //PUT REQUEST FUNCTION TO APPEND INFORMATION IN THE JSON
+    //PUT REQUEST FUNCTION TO APPEND INFORMATION TO PARTICULAR PERSON IN THE JSON
     class func putPeopleInformation (cityNameVal: String, id: Int) -> (){
         
         let appendedDictionary: [String: Any] = ["favoriteCity": cityNameVal]
