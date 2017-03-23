@@ -174,4 +174,35 @@ class PeopleAPIClient{
         }
         task.resume()
     }
+    
+    //DELETE REQUEST 
+    class func deleteIndividualPerson(id: Int) -> (){
+        
+        let url = "https://peopleproject.herokuapp.com/people\(id)"
+        
+        let convertedUrl = URL(string: url)
+        
+        guard let unwrappedConvertedUrl = convertedUrl else {print("unwrappedConvertedUrl did not unwrap"); return}
+        
+        var request = URLRequest(url: unwrappedConvertedUrl)
+        
+        request.addValue("application/json", forHTTPHeaderField: "Accept")
+        
+        request.httpMethod = "DELETE"
+        
+        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+            
+            guard let httpResponse = response as? HTTPURLResponse else{print("httpResponse did not unwrap"); return}
+            
+            if httpResponse.statusCode == 204 {
+                print("You successfully deleted a Person!")
+            }
+            else if httpResponse.statusCode != 204{
+                print("You have not deleted a Person!")
+            }
+        }
+        task.resume()
+    }
+    
+    
 }
