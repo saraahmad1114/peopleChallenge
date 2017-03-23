@@ -10,11 +10,11 @@
 		1BEF45B81E838BC100ED4D62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEF45B71E838BC100ED4D62 /* AppDelegate.swift */; };
 		1BEF45BA1E838BC100ED4D62 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEF45B91E838BC100ED4D62 /* ViewController.swift */; };
 		1BEF45BD1E838BC100ED4D62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BEF45BB1E838BC100ED4D62 /* Main.storyboard */; };
-		1BEF45C01E838BC100ED4D62 /* peopleChallenge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1BEF45BE1E838BC100ED4D62 /* peopleChallenge.xcdatamodeld */; };
 		1BEF45C21E838BC100ED4D62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BEF45C11E838BC100ED4D62 /* Assets.xcassets */; };
 		1BEF45C51E838BC100ED4D62 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BEF45C31E838BC100ED4D62 /* LaunchScreen.storyboard */; };
 		1BEF45D01E838BC100ED4D62 /* peopleChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEF45CF1E838BC100ED4D62 /* peopleChallengeTests.swift */; };
 		1BEF45DB1E838BC100ED4D62 /* peopleChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEF45DA1E838BC100ED4D62 /* peopleChallengeUITests.swift */; };
+		1BEF45E91E838FB600ED4D62 /* PeopleAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEF45E81E838FB600ED4D62 /* PeopleAPIClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +39,6 @@
 		1BEF45B71E838BC100ED4D62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1BEF45B91E838BC100ED4D62 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1BEF45BC1E838BC100ED4D62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		1BEF45BF1E838BC100ED4D62 /* peopleChallenge.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = peopleChallenge.xcdatamodel; sourceTree = "<group>"; };
 		1BEF45C11E838BC100ED4D62 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1BEF45C41E838BC100ED4D62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1BEF45C61E838BC100ED4D62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +48,7 @@
 		1BEF45D61E838BC100ED4D62 /* peopleChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = peopleChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BEF45DA1E838BC100ED4D62 /* peopleChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = peopleChallengeUITests.swift; sourceTree = "<group>"; };
 		1BEF45DC1E838BC100ED4D62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1BEF45E81E838FB600ED4D62 /* PeopleAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleAPIClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,11 +101,11 @@
 			children = (
 				1BEF45B71E838BC100ED4D62 /* AppDelegate.swift */,
 				1BEF45B91E838BC100ED4D62 /* ViewController.swift */,
+				1BEF45E81E838FB600ED4D62 /* PeopleAPIClient.swift */,
 				1BEF45BB1E838BC100ED4D62 /* Main.storyboard */,
 				1BEF45C11E838BC100ED4D62 /* Assets.xcassets */,
 				1BEF45C31E838BC100ED4D62 /* LaunchScreen.storyboard */,
 				1BEF45C61E838BC100ED4D62 /* Info.plist */,
-				1BEF45BE1E838BC100ED4D62 /* peopleChallenge.xcdatamodeld */,
 			);
 			path = peopleChallenge;
 			sourceTree = "<group>";
@@ -196,6 +196,7 @@
 				TargetAttributes = {
 					1BEF45B31E838BC100ED4D62 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = HLKHFWAG55;
 						ProvisioningStyle = Automatic;
 					};
 					1BEF45CA1E838BC100ED4D62 = {
@@ -263,7 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1BEF45BA1E838BC100ED4D62 /* ViewController.swift in Sources */,
-				1BEF45C01E838BC100ED4D62 /* peopleChallenge.xcdatamodeld in Sources */,
+				1BEF45E91E838FB600ED4D62 /* PeopleAPIClient.swift in Sources */,
 				1BEF45B81E838BC100ED4D62 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,6 +415,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = HLKHFWAG55;
 				INFOPLIST_FILE = peopleChallenge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.first.peopleChallenge;
@@ -426,6 +428,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = HLKHFWAG55;
 				INFOPLIST_FILE = peopleChallenge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.first.peopleChallenge;
@@ -507,6 +510,7 @@
 				1BEF45E11E838BC100ED4D62 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1BEF45E21E838BC100ED4D62 /* Build configuration list for PBXNativeTarget "peopleChallengeTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +519,7 @@
 				1BEF45E41E838BC100ED4D62 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1BEF45E51E838BC100ED4D62 /* Build configuration list for PBXNativeTarget "peopleChallengeUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,21 +528,9 @@
 				1BEF45E71E838BC100ED4D62 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		1BEF45BE1E838BC100ED4D62 /* peopleChallenge.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				1BEF45BF1E838BC100ED4D62 /* peopleChallenge.xcdatamodel */,
-			);
-			currentVersion = 1BEF45BF1E838BC100ED4D62 /* peopleChallenge.xcdatamodel */;
-			path = peopleChallenge.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 1BEF45AC1E838BC100ED4D62 /* Project object */;
 }
