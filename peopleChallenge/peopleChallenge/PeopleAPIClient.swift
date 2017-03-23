@@ -96,7 +96,42 @@ class PeopleAPIClient{
         task.resume()
     }
 
-
+    //GET REQUEST FUNCTION TO GET ANY PERSON, BUT WILL BE USED FOR PREVIOUS PERSON 
+    class func getPreviousPersonInformation (id: Int, completion:@escaping([String:Any])->()){
+        var jsonPersonResponse : [String:Any] = [:]
+        
+        let getPeopleUrl = "https://peopleproject.herokuapp.com/people\(id)"
+        
+        let convertedGetPeopleUrl = URL(string: getPeopleUrl)
+        
+        guard let unwrappedConvertedGetPeopleUrl = convertedGetPeopleUrl else{
+            print("converetedGetBookUrl did not unwrap"); return}
+        
+        let request = URLRequest(url: unwrappedConvertedGetPeopleUrl)
+        
+        let task = URLSession.shared.dataTask(with: request, completionHandler: { (data, response, error) in
+            
+            guard let unwrappedJsonData = data else{ print("data from Json did not unwrap"); return}
+            
+            guard let httpResponse = response as? HTTPURLResponse else{print("httpResponse did not unwrap"); return}
+            
+            if httpResponse.statusCode == 200 {
+                
+                let jsonResponseArray = try? JSONSerialization.jsonObject(with: unwrappedJsonData, options: []) as! [String:Any]
+                
+                guard let unwrappedJsonResponse = jsonResponseArray else{print("jsonResponse did not unwarp"); return}
+                
+                jsonPersonResponse = unwrappedJsonResponse
+                
+                completion(jsonPersonResponse)
+            }
+                
+            else if httpResponse.statusCode != 200{
+                print("You did not get an JSON back from the network call")
+            }
+        })
+        task.resume()
+    }
 
 
 }
