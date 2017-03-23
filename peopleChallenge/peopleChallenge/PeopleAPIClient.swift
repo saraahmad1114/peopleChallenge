@@ -96,7 +96,7 @@ class PeopleAPIClient{
         task.resume()
     }
 
-    //GET REQUEST FUNCTION TO GET ANY PERSON, BUT WILL BE USED FOR PREVIOUS PERSON 
+    //GET REQUEST FUNCTION TO PARTICULAR PERSON
     class func getPreviousPersonInformation (id: Int, completion:@escaping([String:Any])->()){
         var jsonPersonResponse : [String:Any] = [:]
         
@@ -133,5 +133,45 @@ class PeopleAPIClient{
         task.resume()
     }
 
-
+    //PUT REQUEST TO APPEND INFORMATION IN THE JSON
+    class func putPeopleInformation (cityNameVal: String, id: Int) -> (){
+        
+        let appendedDictionary: [String: Any] = ["favoriteCity": cityNameVal]
+        let url = "https://peopleproject.herokuapp.com/people\(id)"
+        
+        let convertedUrl = URL(string: url)
+        
+        guard let unwrappedConvertedUrl = convertedUrl else {print("convertedUrl did not unwrap"); return}
+        
+        var request = URLRequest(url: unwrappedConvertedUrl)
+        
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue("application/json", forHTTPHeaderField: "Accept")
+        
+        request.httpMethod = "PUT"
+        
+        do{
+            request.httpBody = try JSONSerialization.data(withJSONObject: appendedDictionary,options: [])
+        }
+        catch let error{
+            print(error)
+        }
+        
+        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+            
+            guard let unwrappedData = data else{print("data did not unwrap"); return}
+            
+            guard let httpResponse = response as? HTTPURLResponse else{print("httpResponse did not unwrap"); return}
+            
+            if httpResponse.statusCode == 200 {
+                print("You have PUT to the server")
+                print(String(data: unwrappedData, encoding: .utf8) ?? "Couldn't print data")
+            }
+                
+            else if httpResponse.statusCode != 200 {
+                print("You have not PUT to the server")
+            }
+        }
+        task.resume()
+    }
 }
