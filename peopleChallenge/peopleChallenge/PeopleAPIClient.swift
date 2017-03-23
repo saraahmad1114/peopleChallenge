@@ -12,7 +12,7 @@ class PeopleAPIClient{
 
     
     //GET Function
-    class func getBookInformation (completion:@escaping(Array<Any>)->()){
+    class func getPeopleInformation (completion:@escaping(Array<Any>)->()){
         var jsonPeopleResponse : Array<Any> = []
         
         let getPeopleUrl = "https://peopleproject.herokuapp.com/people"
@@ -48,7 +48,7 @@ class PeopleAPIClient{
         task.resume()
     }
 
-    class func postBookInformation(nameVal: String, favoriteCityVal: String) -> (){
+    class func postPeopleInformation(nameVal: String, favoriteCityVal: String) -> (){
         
         let dictionaryParameters = ["name": nameVal,
                                     "favoriteCity": favoriteCityVal,

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1BEF45B81E838BC100ED4D62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEF45B71E838BC100ED4D62 /* AppDelegate.swift */; };
-		1BEF45BA1E838BC100ED4D62 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEF45B91E838BC100ED4D62 /* ViewController.swift */; };
 		1BEF45BD1E838BC100ED4D62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BEF45BB1E838BC100ED4D62 /* Main.storyboard */; };
 		1BEF45C21E838BC100ED4D62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BEF45C11E838BC100ED4D62 /* Assets.xcassets */; };
 		1BEF45C51E838BC100ED4D62 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BEF45C31E838BC100ED4D62 /* LaunchScreen.storyboard */; };
@@ -37,7 +36,6 @@
 /* Begin PBXFileReference section */
 		1BEF45B41E838BC100ED4D62 /* peopleChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = peopleChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BEF45B71E838BC100ED4D62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1BEF45B91E838BC100ED4D62 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1BEF45BC1E838BC100ED4D62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1BEF45C11E838BC100ED4D62 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1BEF45C41E838BC100ED4D62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -100,7 +98,6 @@
 			isa = PBXGroup;
 			children = (
 				1BEF45B71E838BC100ED4D62 /* AppDelegate.swift */,
-				1BEF45B91E838BC100ED4D62 /* ViewController.swift */,
 				1BEF45E81E838FB600ED4D62 /* PeopleAPIClient.swift */,
 				1BEF45BB1E838BC100ED4D62 /* Main.storyboard */,
 				1BEF45C11E838BC100ED4D62 /* Assets.xcassets */,
@@ -263,7 +260,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1BEF45BA1E838BC100ED4D62 /* ViewController.swift in Sources */,
 				1BEF45E91E838FB600ED4D62 /* PeopleAPIClient.swift in Sources */,
 				1BEF45B81E838BC100ED4D62 /* AppDelegate.swift in Sources */,
 			);
