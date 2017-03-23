@@ -133,7 +133,7 @@ class PeopleAPIClient{
         task.resume()
     }
 
-    //PUT REQUEST TO APPEND INFORMATION IN THE JSON
+    //PUT REQUEST FUNCTION TO APPEND INFORMATION IN THE JSON
     class func putPeopleInformation (cityNameVal: String, id: Int) -> (){
         
         let appendedDictionary: [String: Any] = ["favoriteCity": cityNameVal]
@@ -175,7 +175,7 @@ class PeopleAPIClient{
         task.resume()
     }
     
-    //DELETE REQUEST 
+    //DELETE REQUEST FUNCTION TO DELETE PERSON
     class func deleteIndividualPerson(id: Int) -> (){
         
         let url = "https://peopleproject.herokuapp.com/people\(id)"
