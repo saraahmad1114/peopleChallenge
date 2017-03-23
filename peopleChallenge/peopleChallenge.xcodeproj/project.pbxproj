@@ -15,6 +15,7 @@
 		1BEF45DB1E838BC100ED4D62 /* peopleChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEF45DA1E838BC100ED4D62 /* peopleChallengeUITests.swift */; };
 		1BEF45E91E838FB600ED4D62 /* PeopleAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEF45E81E838FB600ED4D62 /* PeopleAPIClient.swift */; };
 		1BEF45EB1E83A3E100ED4D62 /* PeopleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEF45EA1E83A3E100ED4D62 /* PeopleTableViewController.swift */; };
+		1BEF45ED1E83A47800ED4D62 /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEF45EC1E83A47800ED4D62 /* People.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		1BEF45DC1E838BC100ED4D62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1BEF45E81E838FB600ED4D62 /* PeopleAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleAPIClient.swift; sourceTree = "<group>"; };
 		1BEF45EA1E83A3E100ED4D62 /* PeopleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleTableViewController.swift; sourceTree = "<group>"; };
+		1BEF45EC1E83A47800ED4D62 /* People.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = People.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				1BEF45B71E838BC100ED4D62 /* AppDelegate.swift */,
 				1BEF45E81E838FB600ED4D62 /* PeopleAPIClient.swift */,
 				1BEF45BB1E838BC100ED4D62 /* Main.storyboard */,
+				1BEF45EC1E83A47800ED4D62 /* People.swift */,
 				1BEF45EA1E83A3E100ED4D62 /* PeopleTableViewController.swift */,
 				1BEF45C11E838BC100ED4D62 /* Assets.xcassets */,
 				1BEF45C31E838BC100ED4D62 /* LaunchScreen.storyboard */,
@@ -263,6 +266,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BEF45ED1E83A47800ED4D62 /* People.swift in Sources */,
 				1BEF45E91E838FB600ED4D62 /* PeopleAPIClient.swift in Sources */,
 				1BEF45EB1E83A3E100ED4D62 /* PeopleTableViewController.swift in Sources */,
 				1BEF45B81E838BC100ED4D62 /* AppDelegate.swift in Sources */,
