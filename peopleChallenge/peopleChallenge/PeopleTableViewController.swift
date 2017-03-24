@@ -66,6 +66,25 @@ class PeopleTableViewController: UITableViewController {
         return cell
     }
     
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath)
+    {
+        if editingStyle == UITableViewCellEditingStyle.delete
+        {
+            let personToBeDeleted = self.store.peopleArray[indexPath.row]
+            
+            guard let needId = personToBeDeleted.id else{
+                print("needId did not unwrap"); return
+            }
+            PeopleAPIClient.deleteIndividualPerson(id: needId)
+
+            self.store.peopleArray.remove(at: indexPath.row)
+
+            self.tableView.reloadData()
+            
+        }
+    }
+    
     //Segue function, to pass on information to other view controller
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "displayPerson"{

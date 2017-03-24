@@ -49,26 +49,7 @@ class PersonViewController: UIViewController {
         }
     }
     
-    @IBAction func previousButtonTapped(_ sender: Any) {
-        
-        guard let unwrappedPersonObject = personObject else{print("unwrappedPersonObject did not unwrap"); return}
-        
-        guard let neededId = unwrappedPersonObject.id else{print("neededId did not unwrap"); return}
-        
-        self.updateNameLabel.text = self.store.peopleArray[neededId-1].name
-        
-        self.updateCityLabel.text = self.store.peopleArray[neededId-1].favoriteCity
-    }
 
-    @IBAction func viewNextButtonTapped(_ sender: Any) {
-        guard let unwrappedPersonObject = personObject else{print("unwrappedPersonObject did not unwrap"); return}
-        
-        guard let neededId = unwrappedPersonObject.id else{print("neededId did not unwrap"); return}
-        
-        self.updateNameLabel.text = self.store.peopleArray[neededId+1].name
-        
-        self.updateCityLabel.text = self.store.peopleArray[neededId+1].favoriteCity
-    }
     /*
     // MARK: - Navigation
 

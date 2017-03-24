@@ -107,13 +107,6 @@
                                     <action selector="changeCityButtonTapped:" destination="F8M-um-kVH" eventType="touchUpInside" id="Vm0-9G-v6L"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dJB-Iw-p9g">
-                                <rect key="frame" x="290" y="396" width="69" height="30"/>
-                                <state key="normal" title="View Next"/>
-                                <connections>
-                                    <action selector="viewNextButtonTapped:" destination="F8M-um-kVH" eventType="touchUpInside" id="u9e-Gd-GkT"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter new city" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ScX-Rr-jEV">
                                 <rect key="frame" x="91" y="237" width="197" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -121,35 +114,21 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h9r-lj-bQp">
-                                <rect key="frame" x="16" y="396" width="96" height="30"/>
-                                <state key="normal" title="View Previous"/>
-                                <connections>
-                                    <action selector="previousButtonTapped:" destination="F8M-um-kVH" eventType="touchUpInside" id="R48-CE-DJq"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="S8V-FU-zfJ" firstAttribute="leading" secondItem="xpz-K6-dhc" secondAttribute="leadingMargin" constant="122" id="3QA-zL-Mxz"/>
                             <constraint firstItem="QvX-Xk-3Y3" firstAttribute="top" secondItem="bO1-8h-R2w" secondAttribute="bottom" constant="24" id="8X0-yk-SII"/>
-                            <constraint firstItem="dJB-Iw-p9g" firstAttribute="trailing" secondItem="xpz-K6-dhc" secondAttribute="trailingMargin" id="Bh1-5v-AG8"/>
                             <constraint firstItem="kbp-3A-UBx" firstAttribute="top" secondItem="qG2-9A-KoD" secondAttribute="bottom" constant="91" id="EY0-LX-WlT"/>
                             <constraint firstItem="bO1-8h-R2w" firstAttribute="leading" secondItem="xpz-K6-dhc" secondAttribute="leadingMargin" constant="75" id="F1j-0p-cKZ"/>
                             <constraint firstItem="vkD-2p-awa" firstAttribute="leading" secondItem="QvX-Xk-3Y3" secondAttribute="trailing" constant="40" id="YOt-QU-men"/>
-                            <constraint firstItem="dJB-Iw-p9g" firstAttribute="leading" secondItem="h9r-lj-bQp" secondAttribute="trailing" constant="178" id="aJm-A7-wZB"/>
-                            <constraint firstItem="dJB-Iw-p9g" firstAttribute="top" secondItem="kbp-3A-UBx" secondAttribute="bottom" constant="220" id="afX-vT-pO1"/>
                             <constraint firstItem="vkD-2p-awa" firstAttribute="top" secondItem="kbp-3A-UBx" secondAttribute="bottom" constant="24" id="eBC-60-evD"/>
                             <constraint firstAttribute="trailingMargin" secondItem="kbp-3A-UBx" secondAttribute="trailing" constant="39" id="fG8-aU-MHz"/>
-                            <constraint firstItem="h9r-lj-bQp" firstAttribute="top" secondItem="QvX-Xk-3Y3" secondAttribute="bottom" constant="175" id="frh-ml-3B8"/>
-                            <constraint firstItem="h9r-lj-bQp" firstAttribute="leading" secondItem="xpz-K6-dhc" secondAttribute="leadingMargin" id="jZP-Y8-IPk"/>
                             <constraint firstItem="bO1-8h-R2w" firstAttribute="top" secondItem="qG2-9A-KoD" secondAttribute="bottom" constant="91" id="lJs-Sm-rPf"/>
                             <constraint firstItem="K3c-LB-G22" firstAttribute="top" secondItem="S8V-FU-zfJ" secondAttribute="bottom" constant="309" id="p02-hd-1CA"/>
                             <constraint firstAttribute="trailingMargin" secondItem="S8V-FU-zfJ" secondAttribute="trailing" constant="136" id="rFV-Sf-lNs"/>
                             <constraint firstItem="kbp-3A-UBx" firstAttribute="leading" secondItem="bO1-8h-R2w" secondAttribute="trailing" constant="25" id="uuW-gm-NR4"/>
                             <constraint firstAttribute="trailingMargin" secondItem="vkD-2p-awa" secondAttribute="trailing" constant="88" id="vsg-qV-ToW"/>
-                            <constraint firstItem="K3c-LB-G22" firstAttribute="top" secondItem="dJB-Iw-p9g" secondAttribute="bottom" constant="197" id="xH8-en-6oB"/>
-                            <constraint firstItem="K3c-LB-G22" firstAttribute="top" secondItem="h9r-lj-bQp" secondAttribute="bottom" constant="197" id="xPj-SG-bwG"/>
                             <constraint firstItem="QvX-Xk-3Y3" firstAttribute="leading" secondItem="xpz-K6-dhc" secondAttribute="leadingMargin" constant="75" id="yuV-9w-FxP"/>
                             <constraint firstItem="S8V-FU-zfJ" firstAttribute="top" secondItem="vkD-2p-awa" secondAttribute="bottom" constant="63" id="ywo-dK-6Hm"/>
                         </constraints>
