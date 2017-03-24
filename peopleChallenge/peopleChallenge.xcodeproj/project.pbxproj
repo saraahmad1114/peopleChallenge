@@ -18,6 +18,7 @@
 		1BEF45ED1E83A47800ED4D62 /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEF45EC1E83A47800ED4D62 /* People.swift */; };
 		1BEF45EF1E83A53F00ED4D62 /* PeopleDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEF45EE1E83A53F00ED4D62 /* PeopleDataStore.swift */; };
 		1BEF45F11E859A0700ED4D62 /* AddPersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEF45F01E859A0700ED4D62 /* AddPersonViewController.swift */; };
+		1BEF45F31E85A34200ED4D62 /* PersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEF45F21E85A34200ED4D62 /* PersonViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		1BEF45EC1E83A47800ED4D62 /* People.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = People.swift; sourceTree = "<group>"; };
 		1BEF45EE1E83A53F00ED4D62 /* PeopleDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleDataStore.swift; sourceTree = "<group>"; };
 		1BEF45F01E859A0700ED4D62 /* AddPersonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPersonViewController.swift; sourceTree = "<group>"; };
+		1BEF45F21E85A34200ED4D62 /* PersonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 			children = (
 				1BEF45B71E838BC100ED4D62 /* AppDelegate.swift */,
 				1BEF45BB1E838BC100ED4D62 /* Main.storyboard */,
+				1BEF45F21E85A34200ED4D62 /* PersonViewController.swift */,
 				1BEF45F01E859A0700ED4D62 /* AddPersonViewController.swift */,
 				1BEF45E81E838FB600ED4D62 /* PeopleAPIClient.swift */,
 				1BEF45EC1E83A47800ED4D62 /* People.swift */,
@@ -278,6 +281,7 @@
 				1BEF45EF1E83A53F00ED4D62 /* PeopleDataStore.swift in Sources */,
 				1BEF45B81E838BC100ED4D62 /* AppDelegate.swift in Sources */,
 				1BEF45F11E859A0700ED4D62 /* AddPersonViewController.swift in Sources */,
+				1BEF45F31E85A34200ED4D62 /* PersonViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

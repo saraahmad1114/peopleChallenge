@@ -24,15 +24,15 @@ class PeopleTableViewController: UITableViewController {
         }
     }
     
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//        OperationQueue.main.addOperation {
-//            self.tableView.reloadData()
-//            print("********************************")
-//            print(self.store.peopleArray.count)
-//            print("********************************")
-//        }
-//    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        OperationQueue.main.addOperation {
+            self.tableView.reloadData()
+            print("********************************")
+            print(self.store.peopleArray.count)
+            print("********************************")
+        }
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -64,6 +64,21 @@ class PeopleTableViewController: UITableViewController {
         }
         
         return cell
+    }
+    
+    //Segue function, to pass on information to other view controller
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "displayPerson"{
+            if let destinationVC = segue.destination as? PersonViewController {
+                
+                let neededIndexPath = self.tableView.indexPathForSelectedRow!
+                
+                destinationVC.personObject = self.store.peopleArray[neededIndexPath.row]
+                print("This worked!")
+            }
+            
+        }
+        
     }
 
 
