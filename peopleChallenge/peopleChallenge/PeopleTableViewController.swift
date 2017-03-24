@@ -9,16 +9,30 @@
 import UIKit
 
 class PeopleTableViewController: UITableViewController {
+    
+    let store = PeopleDataStore.sharedInstance
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        self.store.getPeopleInformation { (peopleArray) in
+            print("*********************")
+            print(peopleArray)
+            print("*********************")
+            OperationQueue.main.addOperation {
+                self.tableView.reloadData()
+            }
+        }
     }
+    
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//        OperationQueue.main.addOperation {
+//            self.tableView.reloadData()
+//            print("********************************")
+//            print(self.store.peopleArray.count)
+//            print("********************************")
+//        }
+//    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -29,23 +43,29 @@ class PeopleTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return self.store.peopleArray.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "peopleCell", for: indexPath)
 
         // Configure the cell...
-
+        if let personName = self.store.peopleArray[indexPath.row].name{
+            cell.textLabel?.text = personName
+        }
+        if let personFavoriteCity = self.store.peopleArray[indexPath.row].favoriteCity{
+            cell.detailTextLabel?.text = personFavoriteCity
+        }
+        
         return cell
     }
-    */
+
 
     /*
     // Override to support conditional editing of the table view.
