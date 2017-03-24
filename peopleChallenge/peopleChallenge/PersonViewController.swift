@@ -10,6 +10,8 @@ import UIKit
 
 class PersonViewController: UIViewController {
     
+    let store = PeopleDataStore.sharedInstance
+    
     var personObject: People?
 
     @IBOutlet weak var updateNameLabel: UILabel!
@@ -22,7 +24,6 @@ class PersonViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
         guard let unwrappedPersonObject = personObject else{print("unwrappedPersonObject did not unwrap"); return}
         
         self.updateNameLabel.text = unwrappedPersonObject.name
@@ -38,16 +39,7 @@ class PersonViewController: UIViewController {
     @IBAction func changeCityButtonTapped(_ sender: Any) {
         guard let unwrappedPersonObject = personObject else{print("unwrappedPersonObject did not unwrap"); return}
         guard let neededId = unwrappedPersonObject.id else {print("neededId did not unwrap"); return}
-        
-      
-       // guard let updatedFavoriteCity = updateCityTextfield.text else{print("updatedFavoriteCity did not unwrap"); return}
-//        if !(condition)!{
-//            PeopleAPIClient.putPeopleInformation(cityNameVal: updatedFavoriteCity, id: neededId)
-//            print("Did a successful put")
-//        }
-//        else{
-//            print("done")
-//        }
+    
         
         if (updateCityTextfield.text?.isEmpty)!{
             print("You didn't change the city!")
@@ -58,9 +50,24 @@ class PersonViewController: UIViewController {
     }
     
     @IBAction func previousButtonTapped(_ sender: Any) {
+        
+        guard let unwrappedPersonObject = personObject else{print("unwrappedPersonObject did not unwrap"); return}
+        
+        guard let neededId = unwrappedPersonObject.id else{print("neededId did not unwrap"); return}
+        
+        self.updateNameLabel.text = self.store.peopleArray[neededId-1].name
+        
+        self.updateCityLabel.text = self.store.peopleArray[neededId-1].favoriteCity
     }
 
     @IBAction func viewNextButtonTapped(_ sender: Any) {
+        guard let unwrappedPersonObject = personObject else{print("unwrappedPersonObject did not unwrap"); return}
+        
+        guard let neededId = unwrappedPersonObject.id else{print("neededId did not unwrap"); return}
+        
+        self.updateNameLabel.text = self.store.peopleArray[neededId+1].name
+        
+        self.updateCityLabel.text = self.store.peopleArray[neededId+1].favoriteCity
     }
     /*
     // MARK: - Navigation
