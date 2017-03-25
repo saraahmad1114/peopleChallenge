@@ -71,7 +71,6 @@ class PeopleAPIClient{
         }
         
         let requestString = NSString(data: request.httpBody!, encoding: String.Encoding.ascii.rawValue)
-        print(requestString!)
         
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.addValue("application/json", forHTTPHeaderField: "Accept")
@@ -84,7 +83,6 @@ class PeopleAPIClient{
             
             if httpResponse.statusCode == 200{
                 print("parameterdictionary was posted to the server")
-                print(unwrappedData)
             }
                 
             else if httpResponse.statusCode != 200{
