@@ -34,6 +34,7 @@ class PeopleDataStore{
                 self.peopleArray.append(singlePersonObject)
 
             }
+            
             completion(self.peopleArray)
         }
     

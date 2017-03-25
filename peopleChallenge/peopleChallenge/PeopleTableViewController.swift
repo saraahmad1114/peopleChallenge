@@ -21,6 +21,7 @@ class PeopleTableViewController: UITableViewController {
         self.store.getPeopleInformation { (peopleArray) in
             
             OperationQueue.main.addOperation {
+                
                 self.tableView.reloadData()
             }
         }
@@ -75,7 +76,9 @@ class PeopleTableViewController: UITableViewController {
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
         if segue.identifier == "displayPerson"{
+            
             if let destinationVC = segue.destination as? PersonViewController {
                 
                 let neededIndexPath = self.tableView.indexPathForSelectedRow!
