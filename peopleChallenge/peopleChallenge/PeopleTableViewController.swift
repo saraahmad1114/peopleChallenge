@@ -26,11 +26,9 @@ class PeopleTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        OperationQueue.main.addOperation {
-            self.tableView.reloadData()
-            print("********************************")
-            print(self.store.peopleArray.count)
-            print("********************************")
+        self.tableView.reloadData()
+            OperationQueue.main.addOperation {
+                self.tableView.reloadData()
         }
     }
 
