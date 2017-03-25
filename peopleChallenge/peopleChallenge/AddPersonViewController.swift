@@ -15,7 +15,6 @@ class AddPersonViewController: UIViewController {
     
     @IBOutlet weak var favoriteCityTextfield: UITextField!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -23,7 +22,6 @@ class AddPersonViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
     
     @IBAction func addPersonButtonTapped(_ sender: Any) {
         
@@ -39,7 +37,9 @@ class AddPersonViewController: UIViewController {
             
             self.present(alert, animated: true, completion: nil)
         }
+            
         else {
+            
             guard let personName = self.nameTextfield.text else{
                 print("personName did not unwrap"); return}
             
@@ -50,7 +50,6 @@ class AddPersonViewController: UIViewController {
            
         }
     }
-    
 
     @IBAction func doneButtonTapped(_ sender: Any) {
         

@@ -81,7 +81,7 @@ class PeopleTableViewController: UITableViewController {
                 let neededIndexPath = self.tableView.indexPathForSelectedRow!
                 
                 destinationVC.personObject = self.store.peopleArray[neededIndexPath.row]
-                print("This worked!")
+
             }
             
         }
