@@ -15,6 +15,11 @@ class PeopleDataStore{
     
     var peopleArray : [People] = []
     
+    func addPerson(person: People){
+      // so objective c like. lol. I prefere objective c
+        self.peopleArray.append(person)
+    }
+    
     func getPeopleInformation(completion:@escaping([People]) ->()){
     
         PeopleAPIClient.getPeopleInformation { (peopleArray) in

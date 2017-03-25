@@ -12,8 +12,23 @@ class PeopleTableViewController: UITableViewController {
     
     let store = PeopleDataStore.sharedInstance
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        self.store.getPeopleInformation { (peopleArray) in
+//            print("*********************")
+//            print(peopleArray)
+//            print("*********************")
+//            OperationQueue.main.addOperation {
+//                self.tableView.reloadData()
+//            }
+//        }
+//    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        self.store.peopleArray.removeAll()
+        
         self.store.getPeopleInformation { (peopleArray) in
             print("*********************")
             print(peopleArray)
@@ -21,14 +36,6 @@ class PeopleTableViewController: UITableViewController {
             OperationQueue.main.addOperation {
                 self.tableView.reloadData()
             }
-        }
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.tableView.reloadData()
-            OperationQueue.main.addOperation {
-                self.tableView.reloadData()
         }
     }
 

@@ -46,7 +46,7 @@ class AddPersonViewController: UIViewController {
                 print("personFavoriteCity did not unwrap"); return
             }
             PeopleAPIClient.postPeopleInformation(nameVal: personName, favoriteCityVal: personFavoriteCity)
-        
+           
         }
     }
     
