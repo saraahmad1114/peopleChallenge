@@ -93,10 +93,10 @@ class PeopleAPIClient{
         task.resume()
     }
 
-    class func getPreviousPersonInformation (id: Int, completion:@escaping([String:Any])->()){
+    class func getParticularPersonInformation (id: Int, completion:@escaping([String:Any])->()){
         var jsonPersonResponse : [String:Any] = [:]
         
-        let getPeopleUrl = "https://peopleproject.herokuapp.com/people\(id)"
+        let getPeopleUrl = "https://peopleproject.herokuapp.com/people/\(id)"
         
         let convertedGetPeopleUrl = URL(string: getPeopleUrl)
         
@@ -187,10 +187,10 @@ class PeopleAPIClient{
             
             guard let httpResponse = response as? HTTPURLResponse else{print("httpResponse did not unwrap"); return}
             
-            if httpResponse.statusCode == 204 {
+            if httpResponse.statusCode == 200 {
                 print("You successfully deleted a Person!")
             }
-            else if httpResponse.statusCode != 204{
+            else if httpResponse.statusCode != 200{
                 print("You have not deleted a Person!")
             }
         }
