@@ -10,7 +10,6 @@ import Foundation
 
 class PeopleAPIClient{
 
-    //GET REQUEST FUNCTION
     class func getPeopleInformation (completion:@escaping(Array<Any>)->()){
         var jsonPeopleResponse : Array<Any> = []
         
@@ -47,7 +46,6 @@ class PeopleAPIClient{
         task.resume()
     }
 
-    //POST REQUEST FUNCTION
     class func postPeopleInformation(nameVal: String, favoriteCityVal: String) -> (){
         
         let dictionaryParameters = ["name": nameVal,
@@ -95,7 +93,6 @@ class PeopleAPIClient{
         task.resume()
     }
 
-    //GET REQUEST FUNCTION TO PARTICULAR PERSON
     class func getPreviousPersonInformation (id: Int, completion:@escaping([String:Any])->()){
         var jsonPersonResponse : [String:Any] = [:]
         
@@ -132,7 +129,6 @@ class PeopleAPIClient{
         task.resume()
     }
 
-    //PUT REQUEST FUNCTION TO APPEND INFORMATION TO PARTICULAR PERSON IN THE JSON
     class func putPeopleInformation (cityNameVal: String, id: Int) -> (){
         
         let appendedDictionary: [String: Any] = ["favoriteCity": cityNameVal]
@@ -164,7 +160,6 @@ class PeopleAPIClient{
             
             if httpResponse.statusCode == 200 {
                 print("You have PUT to the server")
-                print(String(data: unwrappedData, encoding: .utf8) ?? "Couldn't print data")
             }
                 
             else if httpResponse.statusCode != 200 {
@@ -174,7 +169,6 @@ class PeopleAPIClient{
         task.resume()
     }
     
-    //DELETE REQUEST FUNCTION TO DELETE PERSON
     class func deleteIndividualPerson(id: Int) -> (){
         
         let url = "https://peopleproject.herokuapp.com/people/\(id)"

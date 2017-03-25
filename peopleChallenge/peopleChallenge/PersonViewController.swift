@@ -23,7 +23,6 @@ class PersonViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
         guard let unwrappedPersonObject = personObject else{print("unwrappedPersonObject did not unwrap"); return}
         
         self.updateNameLabel.text = unwrappedPersonObject.name
@@ -32,32 +31,22 @@ class PersonViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     
     @IBAction func changeCityButtonTapped(_ sender: Any) {
-        guard let unwrappedPersonObject = personObject else{print("unwrappedPersonObject did not unwrap"); return}
-        guard let neededId = unwrappedPersonObject.id else {print("neededId did not unwrap"); return}
+        guard let unwrappedPersonObject = personObject else{print("unwrappedPersonObject did not unwrap"); return }
+        guard let neededId = unwrappedPersonObject.id else {print("neededId did not unwrap"); return }
+        guard let neededCity = self.updateCityTextfield.text else{print("neededCity did not unwrap"); return }
     
         if (updateCityTextfield.text?.isEmpty)!{
             print("You didn't change the city!")
         }
         else {
+            PeopleAPIClient.putPeopleInformation(cityNameVal: neededCity, id: neededId)
             
-            PeopleAPIClient.putPeopleInformation(cityNameVal: self.updateCityTextfield.text!, id: neededId)
         }
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+ 
 
 }

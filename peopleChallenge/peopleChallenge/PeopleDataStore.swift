@@ -15,11 +15,6 @@ class PeopleDataStore{
     
     var peopleArray : [People] = []
     
-    func addPerson(person: People){
-      // so objective c like. lol. I prefere objective c
-        self.peopleArray.append(person)
-    }
-    
     func getPeopleInformation(completion:@escaping([People]) ->()){
     
         PeopleAPIClient.getPeopleInformation { (peopleArray) in
@@ -37,12 +32,7 @@ class PeopleDataStore{
                 let singlePersonObject = People.init(name: unwrappedPersonName, favoriteCity: unwrappedPersonFavoriteCity, id: unwrappedPersonId)
                 
                 self.peopleArray.append(singlePersonObject)
-                
-                print("****************PERSON INFORMATION**************")
-                print("PERSON NAME: \(singlePersonObject.name)")
-                print("PERSON FAVORITE CITY: \(singlePersonObject.favoriteCity)")
-                print("PERSON ID: \(singlePersonObject.id)")
-                print("************************************************")
+
             }
             completion(self.peopleArray)
          
