@@ -14,7 +14,7 @@ class PeopleAPIClient{
         
         var jsonPeopleResponse : Array<Any> = []
         
-        let getPeopleUrl = "https://peopleproject.herokuapp.com/people"
+        let getPeopleUrl = UrlInformation.neededUrl
         
         let convertedGetPeopleUrl = URL(string: getPeopleUrl)
         
@@ -53,7 +53,7 @@ class PeopleAPIClient{
                                     "favoriteCity": favoriteCityVal,
                                     "id": ""] as [String : Any]
         
-        let postingUrl = "https://peopleproject.herokuapp.com/people"
+        let postingUrl = UrlInformation.neededUrl
         
         let convertingPostingUrl = URL(string: postingUrl)
         
@@ -96,7 +96,7 @@ class PeopleAPIClient{
         
         var jsonPersonResponse : [String:Any] = [:]
         
-        let getPeopleUrl = "https://peopleproject.herokuapp.com/people/\(id)"
+        let getPeopleUrl = "\(UrlInformation.neededUrl)/\(id)"
         
         let convertedGetPeopleUrl = URL(string: getPeopleUrl)
         
@@ -133,7 +133,7 @@ class PeopleAPIClient{
         
         let appendedDictionary: [String: Any] = ["favoriteCity": cityNameVal]
         
-        let url = "https://peopleproject.herokuapp.com/people/\(id)"
+        let url = "\(UrlInformation.neededUrl)/\(id)"
         
         let convertedUrl = URL(string: url)
         
@@ -172,7 +172,7 @@ class PeopleAPIClient{
     
     class func deleteIndividualPerson(id: Int) -> (){
         
-        let url = "https://peopleproject.herokuapp.com/people/\(id)"
+        let url = "\(UrlInformation.neededUrl)/\(id)"
         
         let convertedUrl = URL(string: url)
         
