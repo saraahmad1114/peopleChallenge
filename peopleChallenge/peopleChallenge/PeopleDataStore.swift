@@ -35,7 +35,6 @@ class PeopleDataStore{
 
             }
             completion(self.peopleArray)
-         
         }
     
     }
