@@ -40,11 +40,11 @@ class PersonViewController: UIViewController {
         guard let unwrappedPersonObject = personObject else{print("unwrappedPersonObject did not unwrap"); return}
         guard let neededId = unwrappedPersonObject.id else {print("neededId did not unwrap"); return}
     
-        
         if (updateCityTextfield.text?.isEmpty)!{
             print("You didn't change the city!")
         }
         else {
+            
             PeopleAPIClient.putPeopleInformation(cityNameVal: self.updateCityTextfield.text!, id: neededId)
         }
     }
