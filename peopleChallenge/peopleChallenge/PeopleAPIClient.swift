@@ -11,6 +11,7 @@ import Foundation
 class PeopleAPIClient{
 
     class func getPeopleInformation (completion:@escaping(Array<Any>)->()){
+        
         var jsonPeopleResponse : Array<Any> = []
         
         let getPeopleUrl = "https://peopleproject.herokuapp.com/people"
@@ -94,6 +95,7 @@ class PeopleAPIClient{
     }
 
     class func getParticularPersonInformation (id: Int, completion:@escaping([String:Any])->()){
+        
         var jsonPersonResponse : [String:Any] = [:]
         
         let getPeopleUrl = "https://peopleproject.herokuapp.com/people/\(id)"
@@ -132,6 +134,7 @@ class PeopleAPIClient{
     class func putPeopleInformation (cityNameVal: String, id: Int) -> (){
         
         let appendedDictionary: [String: Any] = ["favoriteCity": cityNameVal]
+        
         let url = "https://peopleproject.herokuapp.com/people/\(id)"
         
         let convertedUrl = URL(string: url)
@@ -196,6 +199,4 @@ class PeopleAPIClient{
         }
         task.resume()
     }
-    
-    
 }
