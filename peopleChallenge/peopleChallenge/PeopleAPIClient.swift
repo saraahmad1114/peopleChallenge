@@ -15,7 +15,6 @@ class PeopleAPIClient{
         var jsonPeopleResponse : Array<Any> = []
         
         let getPeopleUrl = UrlInformation.neededUrl
-        
         let convertedGetPeopleUrl = URL(string: getPeopleUrl)
         
         guard let unwrappedConvertedGetPeopleUrl = convertedGetPeopleUrl else{
