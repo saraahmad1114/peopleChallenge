@@ -15,6 +15,7 @@ class PeopleAPIClient{
         var jsonPeopleResponse : Array<Any> = []
         
         let getPeopleUrl = UrlInformation.neededUrl
+
         let convertedGetPeopleUrl = URL(string: getPeopleUrl)
         
         guard let unwrappedConvertedGetPeopleUrl = convertedGetPeopleUrl else{
@@ -23,9 +24,7 @@ class PeopleAPIClient{
         let request = URLRequest(url: unwrappedConvertedGetPeopleUrl)
         
         let task = URLSession.shared.dataTask(with: request, completionHandler: { (data, response, error) in
-            
             guard let unwrappedJsonData = data else{ print("data from Json did not unwrap"); return}
-            
             guard let httpResponse = response as? HTTPURLResponse else{print("httpResponse did not unwrap"); return}
             
             if httpResponse.statusCode == 200 {
